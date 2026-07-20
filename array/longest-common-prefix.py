@@ -7,4 +7,5 @@ class Solution:
                 if len(word) == i or word[i] != strs[0][i]:
                     return res
             res += strs[0][i]
+        return res
         
