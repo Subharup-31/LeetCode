@@ -12,7 +12,7 @@ class Solution:
             else:
                 count -= 1
 
-            if candidate == 0:
+            if count == 0:
                 candidate = None 
         
         return candidate
