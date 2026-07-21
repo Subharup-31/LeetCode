@@ -10,7 +10,7 @@ class Solution:
             if candidate == i:
                 count += 1
             else:
-                count += 1
+                count -= 1
 
             if candidate == 0:
                 candidate = None 
