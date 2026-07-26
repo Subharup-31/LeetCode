@@ -3,7 +3,6 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-
         low = 0
         high = len(nums)-1
         current = 0
