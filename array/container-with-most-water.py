@@ -1,20 +1,19 @@
 class Solution:
     def maxArea(self, height: List[int]) -> int:
-        # brute force approch will give O(n2), two pointers gives O(n)
-        res = 0
-        left = 0
-        right = len(height) - 1
+        i = 0 
+        j = len(height) - 1
 
-        while left < right:
-            area = (right - left) * min(height[left], height[right])
-            res = max(res, area)
+        max_area = 0
 
-            if height[left] > height[right]:
-                right -= 1
-            elif height[left] < height[right]:
-                left += 1
-            else:
-                # condition where both are equal, either of it can be incremented
-                left += 1
+        while i < j:
 
-        return res
+            # area = lenght x breadth
+            area = (j - i) * min(height[i],height[j])
+            max_area = max(max_area, area)
+
+            if height[i] <= height[j]:
+                i += 1
+            elif height[i] >= height[j]:
+                j -= 1
+
+        return max_area
