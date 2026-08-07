@@ -2,8 +2,6 @@ class Solution:
     def threeSum(self, nums: list[int]) -> list[list[int]]:
         nums.sort()
         ans = []
-
-        # both i and j should be inside the loop because every new k axts as a reset to i and j
         for k in range(len(nums) - 2):
             i = k + 1
             j = len(nums) - 1
@@ -13,7 +11,6 @@ class Solution:
                     continue
 
             while i < j:
-                # j!=k i!=j and i!=k are unnecessary because the pointers always start at different indices
                 current_sum = nums[i] + nums[j] + nums[k]
 
                 if current_sum == 0:
